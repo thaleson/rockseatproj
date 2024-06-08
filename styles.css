@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(1800deg, #9816b3, #1a1a1a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+    color: black;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h2 {
+    margin-bottom: 10px;
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(243, 239, 239);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.theme-switch:checked + .toggle-label {
+    background-color: #2196F3;
+}
+
+.theme-switch:checked + .toggle-label:before {
+    transform: translateX(26px);
+}
+
+.theme-switch:checked + .toggle-label .fas {
+    color: white;
+}
+
+.toggle-label .fas {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    color: black;
+    transition: .4s;
+}
+
+body.light-mode .toggle-label .fas {
+    left: 35px;
+    color: black;
+}
+
+.links a {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode .links a {
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    color: inherit;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #0072ff;
+}
+
+footer p {
+    margin-top: 10px;
+}
+.rocketseat{
+    color:red;
+}
+p a{
+    color: aqua;
+}
